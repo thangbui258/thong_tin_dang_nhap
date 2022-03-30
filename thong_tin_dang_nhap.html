@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thong tin dang nhap</title>
+</head>
+<body>
+<form action="">
+    <p>Ten dang nhap: <input id="ten" type="text" name="Ten"/></p>
+    <p>Mat khau: <input id="pass" type="text" name="Pass"/></p>
+    <button onclick="login()">DANG NHAP</button>
+</form>
+<script>
+    function login() {
+        let ten = document.getElementById('ten').value;
+        let pass = document.getElementById('pass').value;
+
+
+        if (ten == 'admin') {
+            if (pass == 'TheMaster') {
+                alert('Welcome');
+            } else if (pass == 'null') {
+                alert('cancled')
+            } else alert('wrong pass')
+        } else if (ten == 'null') {
+            alert('cancled')
+        } else {
+            alert("i don't know you");
+        }
+    }
+
+
+</script>
+</body>
+</html>
